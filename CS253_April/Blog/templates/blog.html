@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Blog </title>
+	</head>
+	
+	<body>
+		<h1> Richard's Blog </h1>
+		
+		{% for bp in post %}
+			<div class="post"> 
+				<div class="post-title">{{bp.subject}} </div>
+				<hr>
+				<div class="post-content">{{bp.content}}</div>
+			</div>
+		{% endfor%}
+		<footer>
+			<div>{{age}} </div>
+		</footer>
+	</body>
+</html>

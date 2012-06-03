@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head> 
+		<title> History Page </title>
+	</head>
+	
+	<body>
+		{% for p in pages %}
+		<hr>
+		<div>
+			<div> 
+				{{p.name}} 
+			</div>
+			<div> 
+				{{p.content}} 
+				<div>
+					<a href="/_edit/{{p.name}}"> edit </a>
+				</div>
+				<div>
+					{% if loop.index0 == 0 %}
+						<a href="/{{p.name}}"> view </a>
+					{% else %}
+						<a href="/{{p.name}}?v={{loop.index0}}"> view </a>
+					{% endif %}
+				</div>
+			</div>
+		<div>
+		<hr>
+		{% endfor %}
+	</body>	
+</html>

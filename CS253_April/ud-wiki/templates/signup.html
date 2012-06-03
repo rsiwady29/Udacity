@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Signup </title>
+	</head>
+	
+	<body>
+		<h1> Signup </h1>
+		<form method="post">
+			<label> Username </label>
+			<input type="text" name="username" required>
+				<br>
+			<label> Password </label>
+			<input type="password" name="password" required>
+				<br>
+			<label> Verify Password </label> 
+			<input type="password" name="verify" required>
+				<br>
+			<label> Email (optional) </label> 
+			<input type="text" name="email">
+				<br>
+			<input type="submit">
+		</form>
+		
+		<div> {{error}} </div>
+	</body>
+	
+</html>

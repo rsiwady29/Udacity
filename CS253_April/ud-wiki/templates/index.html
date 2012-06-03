@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title> Welcome </title>
+	</head>
+	
+	<body>
+		<h1> Welcome to Richard's Wiki</h1>
+		<div class="login-area">
+			{% if user %}
+			  {{user[0].username}} (<a class="login-link" href="/logout">logout</a>)
+			{% else %}
+			  <a class="login-link" href="/login">login</a>
+			  |
+			  <a class="login-link" href="/signup">signup</a>
+			{% endif %}
+		</div>
+	</body>
+</html>
